@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Integrate by Parts
 
-### Practice Problem 1
+### Practice Problem 1.1
 
 $$\int \ln(x^2-x+2)dx$$
 
@@ -38,12 +38,32 @@ So,
 $$\int \ln(x^2-x+2)dx= x\ln(x^2-x+2)  -2x- \frac{1}{2} \ln({x^2-x+2}) + \sqrt{7}\text{arctan}\left( \sqrt{\frac{4}{7}}\left(x-\frac{1}{2}\right)  \right) + C$$
 \newpage
 
+
+
+## Exact length of the curve
+
+Given $f(x)$ and $a \leq x \leq b$, the exact length of the curve is given by 
+$$L = \int_{a}^{b} \sqrt{1+ (f'(x))^2}dx$$
+
+### Practice Problem 2.1
+
+Find the exact length of the curve:
+
+$x = e^y + \frac{1}{4} e^{-y}, \hspace{.5 cm} 0 \leq y \leq 6$
+
+Since $f(y) = e^y + \frac{1}{4} e^{-y}$, we have $f'(y) = e^y -\frac{1}{4} e^{-y}$
+
+$$L = \int_{0}^{6} \sqrt{1+ \left(e^y -\frac{1}{4} e^{-y}\right)^2}dy =  \int_{0}^{6} \sqrt{1 + \left( e^{2y} + \frac{1}{16} e^{-2y} -\frac{1}{2}\right)}dy=\int_{0}^{6} \sqrt{\frac{16e^{4y} +8e^{2y} + 1}{16 e^{2y}}} dy$$
+
+$$= \int_{0}^{6}\sqrt {\frac{(4e^{2y}+1)^{2}}{16e^{2y}}} dy = \int_{0}^{6} \frac{4e^{2y}+1}{4e^{y}}dy = \int_{0}^{6} e^{y} + \frac{1}{4} e^{-y} dy = \left[ e^{y} -\frac{1}{4} e^{-y}\right]_{0}^{6} = e^{6} - \frac{1}{4e^{6}} - \frac{3}{4}$$
+
+
 ## Surface area of the curve when rotated about the axis.
 
 The surface area of the curve when rotated about the x-axis can be found with the following formula: $$S=2\pi \int_{a}^{b} f(x) \sqrt{(f'(x))^2+1} dx$$
 
 
-### Practice Exercise 1
+### Practice Exercise 3.1
 
 Find the exact area of the surface obtained by rotating the curve about the x-axis.
 
@@ -58,7 +78,7 @@ Let $u=1+9x^4$ so $du=36x^3 dx$
 
 $$=\frac{2\pi}{36} \int_{1}^{730}  {u}^{1/2} du = \frac{\pi}{18} \left[\frac{2}{3} u^{3/2}\right]_{1}^{730} = \frac{\pi}{27} \left[ u^{3/2}\right]_{1}^{730} = \frac{\pi}{27} \left(730\sqrt{730}-1  \right)$$
 
-### Practice Exercise 2
+### Practice Exercise 3.2
 
 Find the exact area of the surface obtained by rotating the curve about the x-axis.
 
@@ -72,7 +92,7 @@ let $u=25-4x$ and $du=-4dx$
 
 $$=-\frac{\pi}{4} \int_{9}^{1} (u)^{1/2}du=\frac{2\pi}{4*3}  \left[u^{3/2} \right]_{1}^{9} = \frac{\pi}{6}[27-1] = \frac{13\pi}{3}$$
 
-### Practice Exercise 3
+### Practice Exercise 3.3
 
 Find the exact area of the surface obtained by rotating the curve about the x-axis.
 
